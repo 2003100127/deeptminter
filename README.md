@@ -5,7 +5,7 @@
 ###### tags: `transmembrane protein` `predicting interaction sites` `v1.0`
 
 ## Overview
-This repository is a software package of DeepTMInter. DeepTMInter is a deep-learning-based approach and it was developed using stacked generalization ensembles of ultradeep residual neural networks. The approach shows a substantial improvement for predicting interaction sites in transmembrane proteins compared to existing methods.
+This repository is a software package of DeepTMInter. DeepTMInter is a deep-learning-based approach and it was developed using stacked generalization ensembles of ultradeep residual neural networks. The approach shows a substantial improvement for predicting interaction sites in transmembrane proteins compared to existing methods. All training and benchmarked data are available [here](https://data.mendeley.com/datasets/2t8kgwzp35/1) and other data are made available upon requests of users via [email](mailto:jianfeng.sunmt@gmail.com).
 
 ## System Requirement
 We tested our software on a Linux operation system due to a number of Linux-dependent software packages generating input features. If you have the feature files as shown in `./input/`, you are able to run our program on multiple platforms, e.g. Windows and Mac. Please be sure of python (version>3.5) installed before using. We highly recommend [Anaconda](https://www.anaconda.com/distribution/), an integrated development environment of python, which eases the use and management of python packages.
@@ -22,10 +22,12 @@ We tested our software on a Linux operation system due to a number of Linux-depe
 
 3. **install DeepTMInter**
 
-    * To download a released package of DeepTMInter stable version in tab `releases`.
+    * To download the prediction models [here](https://github.com/2003100127/deeptminter/releases).
+
+    * To download a released stable version of DeepTMInter [here](https://github.com/2003100127/deeptminter/releases).
     
 
-    * To obtain the latest version of DeepTMInter (download the prediction models in tab `releases`), do
+    * To obtain the latest version of DeepTMInter do
     ```
     git clone https://github.com/2003100127/deeptminter.git
     ```
