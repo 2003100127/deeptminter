@@ -5,7 +5,7 @@
 ###### tags: `transmembrane protein` `predicting interaction sites` `v1.0`
 
 
-> :warning: <span style="color:red">**Note:**</span> Ten supplementary tables (19-28) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35).
+> :information_source::warning: <span style="color:red">**NOTE:**</span> Ten supplementary tables (19-28 :point_up:) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) :exclamation:and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35):exclamation:.
 
 ## Overview
 This repository is a software package of DeepTMInter. DeepTMInter is a deep-learning-based approach and it was developed using stacked generalization ensembles of ultradeep residual neural networks. The approach shows a substantial improvement for predicting interaction sites in transmembrane proteins compared to existing methods. All training and benchmarked data are available [here](https://data.mendeley.com/datasets/2t8kgwzp35/1) and other data are made available upon requests of users via [email](mailto:jianfeng.sunmt@gmail.com).
