@@ -4,6 +4,7 @@
 
 ###### tags: `transmembrane protein` `predicting interaction sites` `v1.0`
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 <span style="color:red">**Note:**</span> ten supplementary tables (19-28) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35).
 
 ## Overview
@@ -98,13 +99,13 @@ We tested our software on a Linux operation system due to a number of Linux-depe
 
 2. description of output file
 
-    It finally returns an output file with suffix of `.deeptminter`.
+    It finally returns an output file with the suffix of `.deeptminter`.
     * The predictions of interaction sites in tansmembrane proteins are shown in the output file, with three columns: 1). positions of animo acids in the input sequence; 2) animo acids; 3) probabilities of being interaction sites.
     * Please **note** that if you have a sequence sharing a high sequence identity to the proteins in the [TrainData](https://data.mendeley.com/datasets/2t8kgwzp35) dataset, we recommend that any of the three output files with the suffix '.mexpand1;.mexpand2;.mexpand3' would be the best option for you.
     * If you want to get the results in the context of no ideally preferred regions predicted by Phobius. You can set `-r` as `combined` to run the program. This will return the predictions of the whole fasta sequence. Then, you can tailor the whole predictions to whatever you want.
 
 ## How to cite
-J. Sun. D. Frishman. Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning, submitted.
+J. Sun. D. Frishman. Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning, *Submitted*.
 
 ## Contact
 If you have any question, please feel free to contact [Jianfeng Sun](mailto:jianfeng.sunmt@gmail.com/jianfeng.sun@tum.de). We highly recommend creating [issue](https://github.com/2003100127/deeptminter/issues) pages when you have problems. Your issues will subsequently be responded.  
