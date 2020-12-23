@@ -4,8 +4,8 @@
 
 ###### tags: `transmembrane protein` `predicting interaction sites` `v1.0`
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++
-<span style="color:red">**Note:**</span> ten supplementary tables (19-28) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35).
+
+> :warning: <span style="color:red">**Note:**</span> Ten supplementary tables (19-28) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35).
 
 ## Overview
 This repository is a software package of DeepTMInter. DeepTMInter is a deep-learning-based approach and it was developed using stacked generalization ensembles of ultradeep residual neural networks. The approach shows a substantial improvement for predicting interaction sites in transmembrane proteins compared to existing methods. All training and benchmarked data are available [here](https://data.mendeley.com/datasets/2t8kgwzp35/1) and other data are made available upon requests of users via [email](mailto:jianfeng.sunmt@gmail.com).
@@ -49,7 +49,7 @@ We tested our software on a Linux operation system due to a number of Linux-depe
         troll.sh is used to generate multiple sequence alignments, transmembrane topologies, and all of evolutionary coupling features including EVfold (generated using FreeContact) and Gaussian DCA.
 
     * shell commands
-        * general (please specify the installed location of the executables or database in `Installation 1 and 4` and put your fasta sequence in the input path before running the following command.)
+        * general (please specify the installed location of the executables or the database in `Installations 1 and 2` and put your fasta sequence in the input path before running the following command.)
         ```
         ./troll.sh -n NAME -c CHAIN -i /YOUR/INPUT/PATH/
         ```
