@@ -4,6 +4,8 @@
 
 ###### tags: `transmembrane protein` `predicting interaction sites` `v1.0`
 
+<span style="color:red">**Note:**</span> ten supplementary tables (19-28) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35).
+
 ## Overview
 This repository is a software package of DeepTMInter. DeepTMInter is a deep-learning-based approach and it was developed using stacked generalization ensembles of ultradeep residual neural networks. The approach shows a substantial improvement for predicting interaction sites in transmembrane proteins compared to existing methods. All training and benchmarked data are available [here](https://data.mendeley.com/datasets/2t8kgwzp35/1) and other data are made available upon requests of users via [email](mailto:jianfeng.sunmt@gmail.com).
 
@@ -43,7 +45,7 @@ We tested our software on a Linux operation system due to a number of Linux-depe
 1. **`src/troll.sh`**
 
     * description
-        troll.sh is used to generate multiple sequence alignments, transmembrane topologies, and all of evolutionary coupling features including CCMpred, EVfold, plmDCA, and Gaussian DCA. 
+        troll.sh is used to generate multiple sequence alignments, transmembrane topologies, and all of evolutionary coupling features including EVfold (generated using FreeContact) and Gaussian DCA.
 
     * shell commands
         * general (please specify the installed location of the executables or database in `Installation 1 and 4` and put your fasta sequence in the input path before running the following command.)
@@ -102,7 +104,7 @@ We tested our software on a Linux operation system due to a number of Linux-depe
     * If you want to get the results in the context of no ideally preferred regions predicted by Phobius. You can set `-r` as `combined` to run the program. This will return the predictions of the whole fasta sequence. Then, you can tailor the whole predictions to whatever you want.
 
 ## How to cite
-J. Sun. D. Frishman. DeepTMInter: xxxxxxxxxxx.
+J. Sun. D. Frishman. Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning, submitted.
 
 ## Contact
 If you have any question, please feel free to contact [Jianfeng Sun](mailto:jianfeng.sunmt@gmail.com/jianfeng.sun@tum.de). We highly recommend creating [issue](https://github.com/2003100127/deeptminter/issues) pages when you have problems. Your issues will subsequently be responded.  
