@@ -5,7 +5,7 @@
 ###### tags: `transmembrane protein` `predicting interaction sites` `v1.0`
 
 
-> :information_source::warning: <span style="color:red">**NOTE:**</span> Ten supplementary tables (19-28 :point_up:) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) :exclamation:and [mendeley](https://data.mendeley.com/datasets/2t8kgwzp35):exclamation:.
+<!-- > :information_source::warning: <span style="color:red">**NOTE:**</span> Ten supplementary tables (19-28 :point_up:) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) :exclamation:and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35):exclamation:. -->
 
 ## Overview
 This repository is a software package of DeepTMInter. DeepTMInter is a deep-learning-based approach and it was developed using stacked generalization ensembles of ultradeep residual neural networks. The approach shows a substantial improvement for predicting interaction sites in transmembrane proteins compared to existing methods. All training and benchmarked data are available [here](https://data.mendeley.com/datasets/2t8kgwzp35/1) and other data are made available upon requests of users via [email](mailto:jianfeng.sunmt@gmail.com).
@@ -105,7 +105,21 @@ We tested our software on a Linux operation system due to a number of Linux-depe
     * If you want to get the results in the context of no ideally preferred regions predicted by Phobius. You can set `-r` as `combined` to run the program. This will return the predictions of the whole fasta sequence. Then, you can tailor the whole predictions to whatever you want.
 
 ## How to cite
-J. Sun. D. Frishman. Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning, *Submitted*.
+J. Sun. D. Frishman. Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning. ***Comput. Struct. Biotechnol. J.***, 2021. DOI: [10.1016/j.csbj.2021.03.005](https://doi.org/10.1016/j.csbj.2021.03.005).
+
+or
+
+``` 
+@article{DeepTMInter2021,
+    title = {Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning},
+    author = {Jianfeng Sun and Dmitrij Frishman},
+    journal = {Computational and Structural Biotechnology Journal},
+    year = {2021},
+    issn = {2001-0370},
+    doi = {https://doi.org/10.1016/j.csbj.2021.03.005},
+    url = {https://www.sciencedirect.com/science/article/pii/S2001037021000775},
+}
+```
 
 ## Contact
-If you have any question, please feel free to contact [Jianfeng Sun](mailto:jianfeng.sunmt@gmail.com/jianfeng.sun@tum.de). We highly recommend creating [issue](https://github.com/2003100127/deeptminter/issues) pages when you have problems. Your issues will subsequently be responded.  
+If you have any question, please contact [Jianfeng Sun](mailto:jianfeng.sunmt@gmail.com/jianfeng.sun@tum.de). We highly recommend creating [issue](https://github.com/2003100127/deeptminter/issues) pages when you have problems. Your issues will subsequently be responded.  
