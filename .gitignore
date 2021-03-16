@@ -1,0 +1,20 @@
+# ingore folder
+model/m1
+model/m2
+model/m3
+model/m4
+model/m5
+model/mexpand1
+model/mexpand2
+model/mexpand3
+model/ensemble.model
+input/3jcuH.fs
+#output/3jcuH.stk
+#output/3jcuH.m1
+#output/3jcuH.m2
+#output/3jcuH.m3
+#output/3jcuH.m4
+#output/3jcuH.m5
+#output/3jcuH.deeptminter
+.idea/
+__pycache__/

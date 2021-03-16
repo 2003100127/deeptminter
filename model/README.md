@@ -1,0 +1,1 @@
+Please download the prediction models of DeepTMInter [here](https://github.com/2003100127/deeptminter/releases), and then put all models in the folder ./model/

@@ -1,0 +1,12 @@
+chain_1	position_1	aa_1	chain_2	position_2	aa_2
+A	76	Y	B	76	Y
+A	76	Y	B	78	H
+A	76	Y	B	163	G
+A	76	Y	B	164	E
+A	78	H	B	76	Y
+A	78	H	B	78	H
+A	78	H	B	79	T
+A	79	T	B	78	H
+A	163	G	B	76	Y
+A	164	E	B	76	Y
+A	306	H	B	122	R
