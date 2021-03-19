@@ -6,7 +6,7 @@
 
 
 <!-- > :information_source::warning: <span style="color:red">**NOTE:**</span> Ten supplementary tables (19-28 :point_up:) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) :exclamation:and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35):exclamation:. -->
-:information_source: News: The DeepTMInter Docker software has become available at [/deeptminter/releases](https://github.com/2003100127/deeptminter/releases). Please see below installation for the Docker version.
+:information_source: News: The DeepTMInter Docker software has become available at [deeptminter/releases](https://github.com/2003100127/deeptminter/releases). Please see below.
 ## Overview
 This repository is a software package of DeepTMInter. DeepTMInter is a deep-learning-based approach and it was developed using stacked generalization ensembles of ultradeep residual neural networks. The approach shows a substantial improvement for predicting interaction sites in transmembrane proteins compared to existing methods. All training and benchmarked data are available [here](https://data.mendeley.com/datasets/2t8kgwzp35/1) and other data are made available upon requests of users via [email](mailto:jianfeng.sunmt@gmail.com).
 
@@ -25,30 +25,32 @@ We tested our software on a Linux operation system due to a number of Linux-depe
 
 3. **install DeepTMInter**
 
-    * To download the prediction models [here](https://github.com/2003100127/deeptminter/releases).
+    * To download the prediction models [here](https://github.com/2003100127/deeptminter/releases). Please put the models in folder [deeptminter/model/](https://github.com/2003100127/deeptminter/tree/main/model).
 
-    * To download a released stable version of DeepTMInter [here](https://github.com/2003100127/deeptminter/releases).
+    * To download a stable version of DeepTMInter [here](https://github.com/2003100127/deeptminter/releases).
     
 
     * To obtain the latest version of DeepTMInter do
-    ```
-    git clone https://github.com/2003100127/deeptminter.git
-    ```
-4. **install DeepTMInter of a Docker version**
+        ```
+        git clone https://github.com/2003100127/deeptminter.git
+        ```
+4. **install DeepTMInter of a Docker version (optional)**
 
-    * To download 5 partitioned Docker packages [here](https://github.com/2003100127/deeptminter/releases).
+    * To install Docker [here](https://www.docker.com/).
+
+    * To download the five partitioned Docker packages [here](https://github.com/2003100127/deeptminter/releases).
 
     * To use [7z](https://www.7-zip.org/) to decompress the 5 partitioned Docker packages. This step will result in a file named `deeptminter_10.docker`.
 
     * to import `deeptminter_10.docker` by 
-    ```
-    docker load < deeptminter_10.docker
-    ```
+        ```
+        docker load < deeptminter_10.docker
+        ```
     
     * to use `deeptminter_10.docker` by 
-    ```
-    docker exec -it deeptminter_10.docker bash
-    ```
+        ```
+        docker exec -it deeptminter_10.docker bash
+        ```
     
 5. **install python dependencies**
     
@@ -65,20 +67,20 @@ We tested our software on a Linux operation system due to a number of Linux-depe
 
     * shell commands
         * general (please specify the installed location of the executables or the database in `Installations 1 and 2` and put your fasta sequence in the input path before running the following command.)
-        ```
-        ./troll.sh -n NAME -c CHAIN -i /YOUR/INPUT/PATH/
-        ```
+            ```
+            ./troll.sh -n NAME -c CHAIN -i /YOUR/INPUT/PATH/
+            ```
         * example
-        ```
-        ./troll.sh -n 3jcu -c H -i ./input/
-        ```
+            ```
+            ./troll.sh -n 3jcu -c H -i ./input/
+            ```
     * parameters
 	    * required
-        ```
-        -n --name -> a sequence name.
-        -c --chain -> a chain name
-        -i --input -> input path
-        ```
+            ```
+            -n --name -> a sequence name.
+            -c --chain -> a chain name
+            -i --input -> input path
+            ```
 
 2. **`src/gdca.julia`**
     
@@ -94,23 +96,22 @@ We tested our software on a Linux operation system due to a number of Linux-depe
     
 	* python commands
 	    * general
-	    ```python=
-        python run_deeptminter.py -n NAME -c CHAIN -i /YOUR/INPUT/PATH/ -o /YOUR/OUTPUT/PATH/ -r REGION
-        ```
+            ```python=
+            python run_deeptminter.py -n NAME -c CHAIN -i /YOUR/INPUT/PATH/ -o /YOUR/OUTPUT/PATH/ -r REGION
+            ```
 	    * example
-        ```python=
-        python run_deeptminter.py -n 3jcu -c H -i ./input/ -o ./output/ -r transmembrane
-        ```
+            ```python=
+            python run_deeptminter.py -n 3jcu -c H -i ./input/ -o ./output/ -r transmembrane
+            ```
 	* parameters
 	    * required
-        ```bash=
-        -n --name -> a sequence name. For example, '3jcu'.
-        -c --chain -> a chain name. For example, 'H'. This can be empty if you prefer a sequnce name like '3jcuH' or '0868'.
-        -i --input -> input path
-        -o --output --> prediction results
-        -r, --region --> region of transmembrane protein. It can take 'transmembrane', 'cytoplasmic', 'extracellular', 'combined', 'all where 'combined' means accumulation of 'transmembrane', 'cytoplasmic', 'extracellular'. 'all' means the whole fasta sequence.
-
-        ```
+            ```bash=
+            -n --name -> a sequence name. For example, '3jcu'.
+            -c --chain -> a chain name. For example, 'H'. This can be empty if you prefer a sequnce name like '3jcuH' or '0868'.
+            -i --input -> input path
+            -o --output --> prediction results
+            -r, --region --> region of transmembrane protein. It can take 'transmembrane', 'cytoplasmic', 'extracellular', 'combined', 'all where 'combined' means accumulation of 'transmembrane', 'cytoplasmic', 'extracellular'. 'all' means the whole fasta sequence.
+            ```
 
 2. description of output file
 
@@ -124,7 +125,7 @@ J. Sun. D. Frishman. Improved sequence-based prediction of interaction sites in 
 
 or
 
-``` 
+```c
 @article{DeepTMInter2021,
     title = {Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning},
     author = {Jianfeng Sun and Dmitrij Frishman},
