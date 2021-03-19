@@ -6,7 +6,7 @@
 
 
 <!-- > :information_source::warning: <span style="color:red">**NOTE:**</span> Ten supplementary tables (19-28 :point_up:) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) :exclamation:and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35):exclamation:. -->
-
+:information_source: News: The DeepTMInter Docker software has become available at [/deeptminter/releases](https://github.com/2003100127/deeptminter/releases). Please see below installation for the Docker version.
 ## Overview
 This repository is a software package of DeepTMInter. DeepTMInter is a deep-learning-based approach and it was developed using stacked generalization ensembles of ultradeep residual neural networks. The approach shows a substantial improvement for predicting interaction sites in transmembrane proteins compared to existing methods. All training and benchmarked data are available [here](https://data.mendeley.com/datasets/2t8kgwzp35/1) and other data are made available upon requests of users via [email](mailto:jianfeng.sunmt@gmail.com).
 
@@ -34,8 +34,23 @@ We tested our software on a Linux operation system due to a number of Linux-depe
     ```
     git clone https://github.com/2003100127/deeptminter.git
     ```
+4. **install DeepTMInter of a Docker version**
 
-4. **install python dependencies**
+    * To download 5 partitioned Docker packages [here](https://github.com/2003100127/deeptminter/releases).
+
+    * To use [7z](https://www.7-zip.org/) to decompress the 5 partitioned Docker packages. This step will result in a file named `deeptminter_10.docker`.
+
+    * to import `deeptminter_10.docker` by 
+    ```
+    docker load < deeptminter_10.docker
+    ```
+    
+    * to use `deeptminter_10.docker` by 
+    ```
+    docker exec -it deeptminter_10.docker bash
+    ```
+    
+5. **install python dependencies**
     
     ```    
 	pip install -r requirements.txt
