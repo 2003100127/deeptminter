@@ -121,7 +121,7 @@ We tested our software on a Linux operation system due to a number of Linux-depe
     * If you want to get the results in the context of no ideally preferred regions predicted by Phobius. You can set `-r` as `combined` to run the program. This will return the predictions of the whole fasta sequence. Then, you can tailor the whole predictions to whatever you want.
 
 ## How to cite
-J. Sun. D. Frishman. Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning. ***Comput. Struct. Biotechnol. J.***, 19:1512–1530, 2021. DOI: [10.1016/j.csbj.2021.03.005](https://doi.org/10.1016/j.csbj.2021.03.005).
+J. Sun. D. Frishman. Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning. ***Comput. Struct. Biotechnol. J.***, 19:1512-1530, 2021. DOI: [10.1016/j.csbj.2021.03.005](https://doi.org/10.1016/j.csbj.2021.03.005).
 
 or
 
