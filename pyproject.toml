@@ -1,0 +1,28 @@
+[project]
+name = "deeptminter"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "Jianfeng Sun",email = "jianfeng.sunmt@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4"
+dependencies = [
+    "numpy (==2.1.3)",
+    "tensorflow (==2.19)",
+    "pandas (==2.2.3)",
+    "joblib (==1.4.2)",
+    "biopython (>=1.85,<2.0)",
+    "pyfiglet (>=1.0.2,<2.0.0)",
+    "click (>=8.1.8,<9.0.0)",
+    "scikit-learn (>=1.6.1,<2.0.0)"
+]
+
+[tool.poetry.scripts]
+deeptminter = "deeptminter.predict:isite_"
+deeptminter_assemble = "deeptminter.predict:stacking_"
+deeptminter_download = "deeptminter.predict:download"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
