@@ -15,27 +15,49 @@ site:
     hide_toc: true
     outline_maxdepth: 2
   nav:
+#    - title: Home
+#      url: /index
+#    - title: Spotlight
+#      url: /spotlight
+#    - title: Versions
+#      url: /versions
+#    - title: About
+#      children:
+#        - title: Developer
+#          url: /developer
+#        - title: Publication
+#          url: /publication
+#    - title: Tutorial
+#      children:
+#        - title: Installation
+#          url: /installation
+#        - title: Data
+#          url: /data
+#        - title: Model
+#          url: /model
+#        - title: Prediction
+#          url: /prediction
     - title: Home
-      url: /index
+      url: /deeptminter/index
     - title: Spotlight
-      url: /spotlight
+      url: /deeptminter/spotlight
     - title: Versions
-      url: /versions
+      url: /deeptminter/versions
     - title: About
       children:
         - title: Developer
-          url: /developer
+          url: /deeptminter/developer
         - title: Publication
-          url: /publication
+          url: /deeptminter/publication
     - title: Tutorial
       children:
         - title: Installation
-          url: /installation
+          url: /deeptminter/installation
         - title: Data
-          url: /data
+          url: /deeptminter/data
         - title: Model
-          url: /model
+          url: /deeptminter/model
         - title: Prediction
-          url: /prediction
+          url: /deeptminter/prediction
 bibliography:
   - jsun.bib

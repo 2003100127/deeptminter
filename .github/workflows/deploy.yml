@@ -1,5 +1,7 @@
 name: Docs Deploy
 on:
+#  release:
+#    types: [ published ]
   push:
     branches: [main]
 env:
