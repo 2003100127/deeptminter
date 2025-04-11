@@ -1,0 +1,41 @@
+version: 1
+project:
+  id: c49ddf5b-8da1-4f12-932e-19fdf2723021
+  title: deeptminter
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/2003100127/deeptminter
+site:
+  template: book-theme
+  options:
+    favicon: img/deeptminter-logo.png
+    logo: img/deeptminter-logo.png
+    twitter: https://x.com/Jianfeng_Sunny
+    hide_toc: true
+    outline_maxdepth: 2
+  nav:
+    - title: Home
+      url: /index
+    - title: Spotlight
+      url: /spotlight
+    - title: Versions
+      url: /versions
+    - title: About
+      children:
+        - title: Developer
+          url: /developer
+        - title: Publication
+          url: /publication
+    - title: Tutorial
+      children:
+        - title: Installation
+          url: /installation
+        - title: Data
+          url: /data
+        - title: Model
+          url: /model
+        - title: Prediction
+          url: /prediction
+bibliography:
+  - jsun.bib

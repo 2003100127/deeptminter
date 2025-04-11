@@ -1,7 +1,7 @@
 # ingore folder
 
 data/
-docs/
+# docs/
 deeptminter/convert.py
 
 .idea/
