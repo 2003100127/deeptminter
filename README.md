@@ -36,9 +36,9 @@ Please check https://2003100127.github.io/deeptminter for its usage.
 
 ## 📚 Citation
 
-<pre style="white-space: pre-wrap;">
 Sun, J., & Frishman, D. (2021). Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning. Computational and structural biotechnology journal, 19, 1512–1530. https://doi.org/10.1016/j.csbj.2021.03.005
-</pre>
+
+In `.bib` form.
 
 ```markdown
 @article{deeptminter2021,
