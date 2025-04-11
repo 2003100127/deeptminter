@@ -1,132 +1,47 @@
-# DeepTMInter
-![](https://img.shields.io/badge/DeepTMInter-executable-519dd9.svg)
-![](https://img.shields.io/badge/last_released_date-Dec._2020-green.svg)
+<h1 align="center">
+    <img src="https://github.com/2003100127/deeptminter/blob/main/docs/img/deeptminter-logo.png?raw=true" width="200" height="55">
+    <br>
+</h1>
 
-###### tags: `transmembrane protein` `predicting interaction sites` `v1.0`
+<hr>
 
+![PyPI](https://img.shields.io/pypi/v/deeptminter?logo=PyPI)
+[![Downloads](https://pepy.tech/badge/deeptminter)](https://pepy.tech/project/deeptminter)
+![](https://img.shields.io/github/stars/2003100127/deeptminter?logo=GitHub&color=blue)
 
-<!-- > :information_source::warning: <span style="color:red">**NOTE:**</span> Ten supplementary tables (19-28 :point_up:) in Excel format for the paper titled "Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning" are available at folder [./data/](https://github.com/2003100127/deeptminter/tree/master/data) :exclamation:and [mendeley](https://data.mendeley.com/drafts/2t8kgwzp35):exclamation:. -->
-:information_source: News: The DeepTMInter Docker software has become available at [deeptminter/releases](https://github.com/2003100127/deeptminter/releases). Please see below.
-## Overview
-This repository is a software package of DeepTMInter. DeepTMInter is a deep-learning-based approach and it was developed using stacked generalization ensembles of ultradeep residual neural networks. The approach shows a substantial improvement for predicting interaction sites in transmembrane proteins compared to existing methods. All training and benchmarked data are available [here](https://data.mendeley.com/datasets/2t8kgwzp35/1) and other data are made available upon requests of users via [email](mailto:jianfeng.sunmt@gmail.com).
+## 💻 Platform
 
-## System Requirement
-We tested our software on a Linux operation system due to a number of Linux-dependent software packages generating input features. If you have the feature files as shown in `./input/`, you are able to run our program on multiple platforms, e.g. Windows and Mac. Please be sure of python (version>3.5) installed before using. We highly recommend [Anaconda](https://www.anaconda.com/distribution/), an integrated development environment of python, which eases the use and management of python packages.
+![Python](https://img.shields.io/badge/-Python-000?&logo=Python)
+![PyPI](https://img.shields.io/badge/-PyPI-000?&logo=PyPI)
 
-## Installation
-    
-1. **install dependencies**.
-    * [HHblits](https://github.com/soedinglab/hh-suite) - generating multiple sequence alignments
-    * [Gaussian DCA](https://github.com/carlobaldassi/GaussDCA.jl) - predictor of residue contacts
-    * [Freecontact](https://rostlab.org/owiki/index.php/FreeContact) - predictor of residue contacts
-    * [Phobius](http://phobius.sbc.su.se/data.html) - predictor of transmembrane topologies
-2. **install protein sequence database**.    
-    * [Uniclust30 database](http://gwdu111.gwdg.de/~compbiol/uniclust/2020_03/) - a curated protein sequence database based on UniProt for HHblits
+## 🧭 Overview
+DeepTMInter is a deep learning framework for accurately predicting interaction sites in α-helical transmembrane proteins using sequence-derived features, enabling large-scale annotation of membrane protein interactions and analysis of drug targets.
 
-3. **install DeepTMInter**
+> Whether you’re working in computational drug discovery, bioinformatics, or protein science, DeepTMInter provides a ready-to-use solution for protein interactions.
 
-    * To download the prediction models [here](https://github.com/2003100127/deeptminter/releases). Please put the models in folder [deeptminter/model/](https://github.com/2003100127/deeptminter/tree/main/model).
+## 📔 Documentation
+Please check https://2003100127.github.io/deeptminter for its usage.
 
-    * To download a stable version of DeepTMInter [here](https://github.com/2003100127/deeptminter/releases).
-    
+## 🛠️ Installation
 
-    * To obtain the latest version of DeepTMInter do
-        ```
-        git clone https://github.com/2003100127/deeptminter.git
-        ```
-4. **install DeepTMInter of a Docker version (optional)**
+* ![PyPI](https://img.shields.io/badge/-PyPI-000?&logo=PyPI) (https://pypi.org/project/deeptminter)
 
-    * To install Docker [here](https://www.docker.com/).
+  ``` shell
+  conda create --name deeptminter python=3.11
+      
+  conda activate deeptminter
+  
+  pip install deeptminter --upgrade
+  ```
 
-    * To download the five partitioned Docker packages [here](https://github.com/2003100127/deeptminter/releases).
+## 📚 Citation
 
-    * To use [7z](https://www.7-zip.org/) to decompress the 5 partitioned Docker packages. This step will result in a file named `deeptminter_10.docker`.
+```shell!
+Sun, J., & Frishman, D. (2021). Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning. Computational and structural biotechnology journal, 19, 1512–1530. https://doi.org/10.1016/j.csbj.2021.03.005
+```
 
-    * to import `deeptminter_10.docker` by 
-        ```
-        docker load < deeptminter_10.docker
-        ```
-    
-    * to use `deeptminter_10.docker` by 
-        ```
-        docker exec -it deeptminter_10.docker bash
-        ```
-    
-5. **install python dependencies**
-    
-    ```    
-	pip install -r requirements.txt
-	```
-
-## Usage
-
-1. **`src/troll.sh`**
-
-    * description
-        troll.sh is used to generate multiple sequence alignments, transmembrane topologies, and all of evolutionary coupling features including EVfold (generated using FreeContact) and Gaussian DCA.
-
-    * shell commands
-        * general (please specify the installed location of the executables or the database in `Installations 1 and 2` and put your fasta sequence in the input path before running the following command.)
-            ```
-            ./troll.sh -n NAME -c CHAIN -i /YOUR/INPUT/PATH/
-            ```
-        * example
-            ```
-            ./troll.sh -n 3jcu -c H -i ./input/
-            ```
-    * parameters
-	    * required
-            ```
-            -n --name -> a sequence name.
-            -c --chain -> a chain name
-            -i --input -> input path
-            ```
-
-2. **`src/gdca.julia`**
-    
-    * description
-        
-        `gdca.julia` is used to generate Gaussian DCA file. You'd better run it cf. https://github.com/carlobaldassi/GaussDCA.jl.
-        
-3. **`run_deeptminter.py`**
-    
-    * description
-        
-        If you have the feature files shown in the `./input/` directory, you can skip over steps 1-2 to step 3. We tested this step in a rigorous way. Be sure of every feature file already in the `./input/` or your preferred input file path. Finally, it works easily like this. 
-    
-	* python commands
-	    * general
-            ```python=
-            python run_deeptminter.py -n NAME -c CHAIN -i /YOUR/INPUT/PATH/ -o /YOUR/OUTPUT/PATH/ -r REGION
-            ```
-	    * example
-            ```python=
-            python run_deeptminter.py -n 3jcu -c H -i ./input/ -o ./output/ -r transmembrane
-            ```
-	* parameters
-	    * required
-            ```bash=
-            -n --name -> a sequence name. For example, '3jcu'.
-            -c --chain -> a chain name. For example, 'H'. This can be empty if you prefer a sequnce name like '3jcuH' or '0868'.
-            -i --input -> input path
-            -o --output --> prediction results
-            -r, --region --> region of transmembrane protein. It can take 'transmembrane', 'cytoplasmic', 'extracellular', 'combined', 'all where 'combined' means accumulation of 'transmembrane', 'cytoplasmic', 'extracellular'. 'all' means the whole fasta sequence.
-            ```
-
-2. description of output file
-
-    It finally returns an output file with the suffix of `.deeptminter`.
-    * The predictions of interaction sites in tansmembrane proteins are shown in the output file, with three columns: 1). positions of animo acids in the input sequence; 2) animo acids; 3) probabilities of being interaction sites.
-    * Please **note** that if you have a sequence sharing a high sequence identity to the proteins in the [TrainData](https://data.mendeley.com/datasets/2t8kgwzp35) dataset, we recommend that any of the three output files with the suffix '.mexpand1;.mexpand2;.mexpand3' would be the best option for you.
-    * If you want to get the results in the context of no ideally preferred regions predicted by Phobius. You can set `-r` as `combined` to run the program. This will return the predictions of the whole fasta sequence. Then, you can tailor the whole predictions to whatever you want.
-
-## How to cite
-J. Sun. D. Frishman. Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning. ***Comput. Struct. Biotechnol. J.***, 19:1512-1530, 2021. DOI: [10.1016/j.csbj.2021.03.005](https://doi.org/10.1016/j.csbj.2021.03.005).
-
-or
-
-```c
-@article{DeepTMInter2021,
+```markdown
+@article{deeptminter2021,
     title = {Improved sequence-based prediction of interaction sites in α-helical transmembrane proteins by deep learning},
     author = {Jianfeng Sun and Dmitrij Frishman},
     journal = {Computational and Structural Biotechnology Journal},
@@ -139,5 +54,11 @@ or
 }
 ```
 
-## Contact
-If you have any question, please contact [Jianfeng Sun](mailto:jianfeng.sunmt@gmail.com/jianfeng.sun@tum.de). We highly recommend creating [issue](https://github.com/2003100127/deeptminter/issues) pages when you have problems. Your issues will subsequently be responded.  
+## 🏠 Developer
+[Jianfeng Sun](https://www.2003100127.github.io) 
+
+## 📧 Contact
+[![Linkedin Badge](https://img.shields.io/badge/-Jianfeng_Sun-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jianfeng-sun-2ba9b1132)](https://www.linkedin.com/in/jianfeng-sun-2ba9b1132) 
+[![Gmail Badge](https://img.shields.io/badge/-jianfeng.sunmt@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jianfeng.sunmt@gmail.com)](mailto:jianfeng.sunmt@gmail.com)
+[![Outlook Badge](https://img.shields.io/badge/jianfeng.sun@ndorms.ox.ac.uk--000?style=social&logo=microsoft-outlook&logoColor=0078d4&link=mailto:jianfeng.sun@ndorms.ox.ac.uk)](mailto:jianfeng.sun@ndorms.ox.ac.uk)
+<a href="https://twitter.com/Jianfeng_Sunny" ><img src="https://img.shields.io/twitter/follow/Jianfeng_Sunny.svg?style=social" /></a>
